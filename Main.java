@@ -11,14 +11,18 @@
 public class Main {
     public static void main(String[] args) {
 
+        int box_size = 5;
         LinkedList list = new LinkedList();
 
-        
 
         // Add nodes to the list
-        list.addFirst(10);
-        list.addLast(20);
-        list.addLast(30);
+        for (int i = 1; i<= box_size ; i++){
+            list.addMultipleBs(box_size);
+            list.printList();
+            list.clear();
+            //System.out.println("\n");
+        }
+        
 
         // Print the list
         list.printList(); // Output: 10 -> 20 -> 30 -> null
@@ -33,6 +37,9 @@ public class Main {
         // Print the list again
         list.printList(); // Output: 20 -> null
 
+
+
+        
         
     }
 }

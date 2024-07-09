@@ -10,14 +10,14 @@ public class LinkedList {
     }
 
     // Method to add a node at the front of the list
-    public void addFirst(int data) {
+    public void addFirst(String data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
 
     // Method to add a node at the end of the list
-    public void addLast(int data) {
+    public void addLast(String data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -28,6 +28,13 @@ public class LinkedList {
             last = last.next;
         }
         last.next = newNode;
+    }
+
+    // Method to add multiple "B" nodes at the end of the list
+    public void addMultipleBs(int x) {
+        for (int i = 0; i < x; i++) {
+            addLast("#");
+        }
     }
 
     // Method to delete the first node
@@ -55,10 +62,10 @@ public class LinkedList {
     public void printList() {
         Node current = head;
         while (current != null) {
-            System.out.print(current.data + " -> ");
+            System.out.print(current.data + "");
             current = current.next;
         }
-        System.out.println("null");
+        System.out.println("");
     }
 
     // Method to get the size of the linked list
@@ -70,5 +77,10 @@ public class LinkedList {
             current = current.next;
         }
         return size;
+    }
+
+    // Método para eliminar toda la lista
+    public void clear() {
+        head = null;
     }
 }

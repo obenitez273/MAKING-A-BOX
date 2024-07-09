@@ -2,11 +2,11 @@
 //Create a function that creates a box based on dimension n.
 
 public class Node {
-    int data;
+    String data;
     Node next;
 
     // Constructor
-    public Node(int data) {
+    public Node(String data) {
         this.data = data;
         this.next = null;
     }
