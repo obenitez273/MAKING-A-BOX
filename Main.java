@@ -17,10 +17,18 @@ public class Main {
 
         // Add nodes to the list
         for (int i = 1; i<= box_size ; i++){
-            list.addMultipleBs(box_size);
-            list.printList();
-            list.clear();
-            //System.out.println("\n");
+            
+            if (i == 1 || i == box_size) {
+                //System.out.println("TAPA");
+                list.addMultipleBs(box_size);
+                list.printList();
+                list.clear();
+            } else if (i >= 2 || i < box_size ) {
+                System.out.println("RELLENO");
+            }
+
+            
+            //System.out.println("\n");*/
         }
         
 
