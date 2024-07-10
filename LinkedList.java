@@ -60,17 +60,7 @@ public class LinkedList {
     }
 
     // Method to print the linked list
-    public void printList1() {
-        Node current = head;
-        while (current != null) {
-            System.out.print(current.data + "");
-            current = current.next;
-        }
-        System.out.println("");
-    }
-
-    // Método para imprimir la lista enlazada con formato específico para list2
-    public void printList2() {
+    public void printList() {
         Node current = head;
         while (current != null) {
             System.out.print(current.data + "");

@@ -8,57 +8,48 @@
   "#####"
 ] 5x5 box */
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the size of your box: ");
+        int box_size = scanner.nextInt() ;
+        scanner.close();
 
-        int box_size = 1;
         LinkedList list = new LinkedList();
 
-
-        // Add nodes to the list
         for (int i = 1; i<= box_size ; i++){
             
-            if (i == 1 || i == box_size) {
-                LinkedList list1 = new LinkedList();
-                //System.out.println("TAPA");
-                list1.addMultipleBs(box_size);
-                list1.printList1();
-                list1.clear();
+            if (i == 1 || i == box_size) {               
+                //Tapa de la caja
+                list.addMultipleBs(box_size);
+                list.printList();
+                list.clear();
             } else if (i >= 2 || i < box_size ) {
-                //System.out.println("RELLENO");
-                LinkedList list2 = new LinkedList();
-                list2.addFirst("#");
+                //Relleno de la caja              
+                list.addFirst("#");
                 for (int j = 0; j <= box_size - 3; j++) {
-                    list2.addFirst(" ");
+                    list.addFirst(" ");
                 }
-                list2.addFirst("#");
-                //System.out.println("TAPA");
-                //list2.addMultipleBs(2);
-                list2.printList2();
-                list2.clear();
+                list.addFirst("#");
+                list.printList();
+                list.clear();
             }
 
-            
-            //System.out.println("\n");*/
         }
-        
 
+        System.out.println(box_size + " x " + box_size + " box ");
         // Print the list
-        //list.printList(); // Output: 10 -> 20 -> 30 -> null
+        //list.printList(); 
 
         // Get the size of the list
-        System.out.println("Size: " + list.getSize()); // Output: Size: 3
+        //System.out.println("Size: " + list.getSize()); // Output: Size: 3
 
         // Delete first and last nodes
-        list.deleteFirst();
-        list.deleteLast();
+        //list.deleteFirst();
+        //list.deleteLast();
 
-        // Print the list again
-        //list.printList(); // Output: 20 -> null
-
-
-
-        
-        
     }
 }
